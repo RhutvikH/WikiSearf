@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 import spacy
 from collections import Counter
 
-nlp = spacy.load('en_core_web_sm')
+nlp = spacy.load('en_core_web_sm-3.8.0')
 
 def yield_documents(path):
     with gzip.open(path, 'rt', encoding='utf-8') as file:

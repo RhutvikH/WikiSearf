@@ -4,7 +4,7 @@ import spacy
 import heapq
 from collections import defaultdict
 
-nlp = spacy.load('en_core_web_sm')
+nlp = spacy.load('en_core_web_sm-3.8.0')
 
 def show_some_entries(db_path: str):
 
