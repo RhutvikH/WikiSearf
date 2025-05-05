@@ -7,10 +7,10 @@ import os
 
 
 def main(query: str) -> None:
-    db_path: str = "db/wikip_db.db"
+    db_path: str = os.path.join(os.getcwd(), "db", "wikip_db.db")
     doc_path: str = "/home/marcusholloway/Documents/wiki/small_wikip.xml.gz"
 
-    print(os.path.exists("db/wikip_db.db"))
+    # print(os.path.exists("db/wikip_db.db"))
     # create_tables(db_path)
     # add_documents_to_db(db_path, doc_path)
     # show_some_entries(db_path)
