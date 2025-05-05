@@ -191,14 +191,15 @@ def get_top_docs(db_path: str, query: str, n: int, db_size: int, avg_doc_length:
 
     # print(tf_idfs)
     n_largest: list = heapq.nlargest(n, tf_idfs, key = lambda tf_idf: tf_idfs[tf_idf])
+    relevant_ids: int = len(n_largest)
 
-    if len(n_largest) < n:
-        print(f"Documents from index {len(n_largest)} onwards are irrelevant to the query\n")
+    # if len(n_largest) < n:
+    #     print(f"Documents from index {len(n_largest)} onwards are irrelevant to the query\n")
 
     n_largest.extend(get_random_docs(db_size, n - len(n_largest)))
     print(n_largest)
 
-    return n_largest
+    return n_largest, relevant_ids
 
 
 # db_path: str = "db/wikip_db.db"

@@ -22,13 +22,13 @@ def main(query: str) -> None:
 
     db_size: int = get_doc_db_size(db_path)
     avg_doc_length: float = get_avg_doc_length(db_path)
-    print(db_size)
-    best_doc_ids: list = get_top_docs(db_path, query, 10, db_size, avg_doc_length)
+    # print(db_size)
+    best_doc_ids, num_docs = get_top_docs(db_path, query, 10, db_size, avg_doc_length)
 
     # for id in best_doc_ids:
         # show_document(db_path, id)
         # print("\n")
-    return get_docs(db_path, best_doc_ids)
+    return get_docs(db_path, best_doc_ids), num_docs
 
 
 if __name__ == "__main__":
