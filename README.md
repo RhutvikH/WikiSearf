@@ -1,7 +1,7 @@
 # WikiSearf 🔍
 
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/license-GPL-green.svg)](https://opensource.org/licenses/gpl-3-0)
 
 A powerful Wikipedia search tool that provides fast and efficient access to Wikipedia content through command-line interface.
 
